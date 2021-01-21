@@ -46,28 +46,31 @@ namespace CalculadoraBasica
             Result = "0";
         }
 
+        private void ConvertirADouble()
+        {
+            Dnum1 = Convert.ToDouble(Num1);
+            Dnum2 = Convert.ToDouble(Num2);
+        }
+
         /** 
          * Metodos que componen las diferentes operaciones que se 
          * podran realizar con esta clase.
          */
         public Double Suma() 
         {
-            Dnum1 = Convert.ToDouble(Num1);
-            Dnum2 = Convert.ToDouble(Num2);
+            ConvertirADouble();
             return (Dnum1 + Dnum2);
         }
 
         public Double Resta()
         {
-            Dnum1 = Convert.ToDouble(Num1);
-            Dnum2 = Convert.ToDouble(Num2);
+            ConvertirADouble();
             return (Dnum1 - Dnum2);
         }
 
         public Double Division()
-        { 
-            Dnum1 = Convert.ToDouble(Num1);
-            Dnum2 = Convert.ToDouble(Num2);
+        {
+            ConvertirADouble();
             if (Dnum2 != 0)
             {
                 return (Dnum1 / Dnum2);
@@ -77,8 +80,7 @@ namespace CalculadoraBasica
 
         public Double Multiplicar()
         {
-            Dnum1 = Convert.ToDouble(Num1);
-            Dnum2 = Convert.ToDouble(Num2);
+            ConvertirADouble();
             if (Dnum2 != 0)
             {
                 return (Dnum1 * Dnum2);
@@ -88,8 +90,7 @@ namespace CalculadoraBasica
 
         public Double Porciento()
         {
-            Dnum1 = Convert.ToDouble(Num1);
-            Dnum2 = Convert.ToDouble(Num2);
+            ConvertirADouble();
             if (Dnum2 != 0)
             {
                 return (Dnum1 * Dnum2) / 100;
